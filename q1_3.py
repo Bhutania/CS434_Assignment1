@@ -1,8 +1,14 @@
 import numpy as np
 import os
+import sys
 
-h_training_data = os.getcwd() + '/housing_train.csv'
-h_test_data = os.getcwd() + '/housing_test.csv'
+args = sys.argv
+if(args[1] == "housing_train.csv" and args[2] == "housing_test.csv"):
+    h_training_data = args[1]
+    h_test_data = args[2]
+else:
+    print("Incorrect files passed, exiting...")
+    quit()
 
 training_x = np.genfromtxt(h_training_data, usecols=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12), delimiter=',')
 training_y = np.genfromtxt(h_training_data, usecols=(-1),  delimiter=',')

@@ -1,9 +1,15 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import os
+import sys
 
-h_training_data = 'housing_train.csv'
-h_testing_data = 'housing_test.csv'
+args = sys.argv
+if(args[1] == "housing_train.csv" and args[2] == "housing_test.csv"):
+    h_training_data = args[1]
+    h_testing_data = args[2]
+else:
+    print("Incorrect files passed, exiting...")
+    quit()
 
 # Generate the 20 random features 
 rand_feat = []
