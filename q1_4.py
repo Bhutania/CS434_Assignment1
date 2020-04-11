@@ -62,6 +62,7 @@ plt.xlabel("d")
 plt.xticks([0,2,4,6,8,10,12,14,16,18,20])
 plt.ylabel("Training ASE")
 plt.savefig("TrainingASE.png")
+plt.clf()
 
 plt.plot(d, test_err_list)
 plt.xlabel("d")
