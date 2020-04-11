@@ -55,14 +55,16 @@ for i in range(10):
 
 # Plot the training and testing ASE's vs d
 d = [2,4,6,8,10,12,14,16,18,20]
+plt.rcParams['font.family'] = ['serif']
+
 plt.plot(d, train_err_list)
 plt.xlabel("d")
 plt.xticks([0,2,4,6,8,10,12,14,16,18,20])
 plt.ylabel("Training ASE")
-plt.show()
+plt.savefig("TrainingASE.png")
 
 plt.plot(d, test_err_list)
 plt.xlabel("d")
 plt.xticks([0,2,4,6,8,10,12,14,16,18,20])
 plt.ylabel("Testing ASE")
-plt.show()
+plt.savefig("TestingASE.png")
