@@ -1,12 +1,20 @@
+import os
+import sys
+
 import matplotlib.pyplot as plt
 import numpy as np
-import os
+
+args = sys.argv
+if(args[1] == "usps_train.csv" and args[2] == "usps_test.csv" and float(args[3])):
+    learning_factor = float(args[3])
+else:
+    print("Incorrect files passed, exiting...")
+    quit()
 
 np.seterr(all='raise')
 
 u_train_data = os.getcwd() + '/usps_train.csv'
 u_test_data = os.getcwd() + '/usps_test.csv'
-learning_factor = .01;
 
 train_x = np.genfromtxt(u_train_data, usecols=range(256), delimiter=',')
 train_y = np.genfromtxt(u_train_data, usecols=(-1),  delimiter=',')
