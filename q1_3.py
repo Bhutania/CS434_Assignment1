@@ -31,6 +31,6 @@ testing_err = 0
 for x in range(0, test_y.size):
     testing_err+=(test_y[x]-np.inner(test_x[x], weights))**2
 
-testing_err=(testing_err/training_y.size)
+testing_err=(testing_err/test_y.size)
 
 print(testing_err)
