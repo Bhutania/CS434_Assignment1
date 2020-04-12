@@ -14,6 +14,8 @@ training_x = np.genfromtxt(h_training_data, usecols=(0, 1, 2, 3, 4, 5, 6, 7, 8, 
 training_y = np.genfromtxt(h_training_data, usecols=(-1),  delimiter=',')
 weights = np.dot(np.linalg.inv(np.dot(training_x.T, training_x)), np.dot(training_x.T, training_y))
 
+print(weights)
+
 test_y = np.genfromtxt(h_test_data, usecols=(-1), delimiter=',')
 test_x = np.genfromtxt(h_test_data, usecols=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12), delimiter=',')
 
