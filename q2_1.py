@@ -1,12 +1,18 @@
 import matplotlib.pyplot as plt
 import numpy as np
 import os
+import sys
+
+args = sys.argv
+if(args[1] == "usps_train.csv" and args[2] == "usps_test.csv"):
+    u_train_data = args[1]
+    u_test_data = args[2]
+else:
+    print("Incorrect files passed, exiting...")
+    quit()
 
 np.seterr(all='raise')
-
-u_train_data = os.getcwd() + '/usps_train.csv'
-u_test_data = os.getcwd() + '/usps_test.csv'
-learning_factor = .01;
+learning_factor = .01
 
 train_x = np.genfromtxt(u_train_data, usecols=range(256), delimiter=',')
 train_y = np.genfromtxt(u_train_data, usecols=(-1),  delimiter=',')
