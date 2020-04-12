@@ -9,4 +9,8 @@ Assignment1 for CS434 at oregon state university
 
     2_1: python3 q2_1.py usps_train.csv usps_test.csv learningrate
     2_2: See the report
-    2_3: python3 q2_3.py usps_train.csv usps_test.csv lambdas
+    2_3: python3 q2_3.py usps_train.csv usps_test.csv lambdas*
+    
+    *For lambdas, make sure it is formatted as [1,2,3,4] with no spaces
+    
+    
